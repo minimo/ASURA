@@ -10,7 +10,7 @@ asura = {
     core: null,
 };
 
-pb3.ASURA = tm.createClass({
+asura.ASURA = tm.createClass({
     superClass: tm.app.CanvasApp,
     score: 0,
     highScore: 0,       //ハイスコア
@@ -33,7 +33,7 @@ pb3.ASURA = tm.createClass({
             height: SC_H,
             nextScene: function() {
                 this._onLoadAssets();
-                return asura.TitleScene();
+                return asura.MainScene();
             }.bind(this),
         });
         loadingScene.bg.canvas.clearColor("black");

@@ -8,5 +8,6 @@
 var assets = {
     //images
     "gunship1":     "assets/gunship1.png",
+    "mask":         "assets/mask.png",
 }
 

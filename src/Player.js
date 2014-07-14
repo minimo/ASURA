@@ -6,15 +6,15 @@
  *  This Program is MIT license.
  */
 
-Player = tm.createClass({
-    superClass: tm.app.Sprite,
+tm.define("asura.Player", {
+    superClass: "tm.display.Sprite",
 
     control: true,  //操作可能フラグ
     shotON: true,   //ショットフラグ
     mouseON: false, //マウス操作中フラグ
 
     speed: 3,       //移動速度
-    rollcount: 50   //機体ロール具合
+    rollcount: 50,  //機体ロール具合
     type: 0,        //自機タイプ
 
     init: function() {
@@ -22,6 +22,7 @@ Player = tm.createClass({
         this.setFrameIndex(4,32,32);
 
         this.time = 0;
+        return this;
     },
     update: function() {
         //操作系
@@ -87,16 +88,6 @@ Player = tm.createClass({
             this.setFrameIndex(i,32,32);
         }
         
-        //バックファイア
-        var p = pb3.Particle(20, 1.0, 0.95, null, 128, 128, 255).addChildTo(app.currentScene);
-        p.x = this.x;
-        p.y = this.y+16;
-        p.vy = 1;
-        var p = pb3.Particle(20, 1.0, 0.95, null, 128, 128, 255).addChildTo(app.currentScene);
-        p.x = this.x;
-        p.y = this.y+16;
-        p.vy = 1;
-
         this.bx = this.x;
         this.by = this.y;
         this.time++;

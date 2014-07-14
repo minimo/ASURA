@@ -55,7 +55,7 @@ app = {};
 
 //アプリケーションメイン
 tm.main(function() {
-    app = pb3.ASURA("#world");
+    app = asura.ASURA("#world");
     app.enableStats();
     app.run();
 });
