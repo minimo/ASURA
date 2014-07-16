@@ -13,13 +13,13 @@ tm.define("asura.Player", {
     shotON: true,   //ショットフラグ
     mouseON: false, //マウス操作中フラグ
 
-    speed: 3,       //移動速度
+    speed: 7,       //移動速度
     rollcount: 50,  //機体ロール具合
     type: 0,        //自機タイプ
 
     init: function() {
         this.superInit("gunship1", 32, 32);
-        this.setFrameIndex(4,32,32);
+        this.setFrameIndex(4);
 
         this.time = 0;
         return this;
@@ -62,16 +62,16 @@ tm.define("asura.Player", {
         }
 
         if (this.bx > this.x) {
-            this.rollcount-=2;
+            this.rollcount-=3;
             if (this.rollcount < 0) this.rollcount = 0;
         }
         if (this.bx < this.x) {
-            this.rollcount+=2;
+            this.rollcount+=3;
             if (this.rollcount > 80) this.rollcount = 80;
         }
         if (this.bx == this.x) {
-            if (this.rollcount < 50) this.rollcount+=2;
-            else this.rollcount-=2;
+            if (this.rollcount < 50) this.rollcount+=3;
+            else this.rollcount-=3;
             if (this.rollcount < 0) this.rollcount = 0;
             if (this.rollcount > 80) this.rollcount = 80;
         }

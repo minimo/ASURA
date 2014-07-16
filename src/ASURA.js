@@ -31,12 +31,12 @@ asura.ASURA = tm.createClass({
             assets: assets,
             width: SC_W,
             height: SC_H,
+            bgColor: "black",
             nextScene: function() {
                 this._onLoadAssets();
                 return asura.MainScene();
             }.bind(this),
         });
-        loadingScene.bg.canvas.clearColor("black");
         this.replaceScene(loadingScene);
     },
 

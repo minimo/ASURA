@@ -30,15 +30,16 @@ tm.define("asura.MainScene", {
         this.superInit();
         this.background = "rgba(0, 0, 0, 0.0)";
 
-        this.player = asura.Player().addChildTo(this);
-        this.player.setPosition(SC_W/2, SC_H/2);
-
         //バックグラウンド
         this.bg = tm.display.Sprite("mask", SC_W, SC_H).addChildTo(this);
         this.bg.setPosition(SC_W/2, SC_H/2);
 
         //マルチタッチ初期化
         this.touches = tm.input.TouchesEx(this);
+
+        this.player = asura.Player().addChildTo(this);
+        this.player.setPosition(SC_W/2, SC_H/2);
+        this.player.setScale(2.0);
     },
     
     update: function() {
