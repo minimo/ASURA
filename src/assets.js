@@ -9,7 +9,6 @@ var assets = {
     //images
     "mask":         "assets/mask.png",
     "gunship1":     "assets/gunship1.png",
-    "shot1":        "assets/shot1.png",
-    "shot2":        "assets/shot2.png",
+    "shot":         "assets/shot.png",
 }
 

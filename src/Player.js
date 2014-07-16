@@ -1,7 +1,7 @@
 /*
  *  ASURA
  *  player.js
- *  2013/07/10
+ *  2014/07/10
  *  @auther minimo  
  *  This Program is MIT license.
  */

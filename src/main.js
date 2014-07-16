@@ -17,6 +17,11 @@ var DEBUG = false;
 SC_W = 640;
 SC_H = 640;
 
+SC_W_L = -64;
+SC_W_R = 704;
+SC_H_U = -64;
+SC_H_L = 704;
+
 //難易度
 DIFF_EASY   = 0;
 DIFF_NORMAL = 1;
