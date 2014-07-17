@@ -10,6 +10,8 @@ tm.define("asura.Bullet", {
     superClass: "tm.display.Sprite",
 
     speed: 7,       //移動速度
+    vx: 0,
+    vy: 0,
     type: 0,        //タイプ
 
     init: function() {
@@ -20,28 +22,8 @@ tm.define("asura.Bullet", {
         return this;
     },
     update: function() {
-    },
-});
-
-tm.define("asura.Shot", {
-    superClass: "tm.display.Sprite",
-
-    speed: 7,       //移動速度
-    vx: 0,
-    vy: 0,
-    type: 0,        //タイプ
-
-    init: function(x, y, rad) {
-        this.superInit("shot", 24, 32);
-
-        this.setPosition(x, y);
-        this.vx = Math.cos(rad)*this.speed;
-        this.vx = Math.cos(rad)*this.speed;
-        this.rotation = rad*toDeg;
-        return this;
-    },
-    update: function() {
         this.x += this.vx;
         this.y += this.vy;
     },
 });
+
