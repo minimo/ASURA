@@ -27,7 +27,7 @@ asura.ASURA = tm.createClass({
 
         this.keyboard = tm.input.Keyboard(window);
 
-        var loadingScene = tm.ui["LoadingScene"]({
+        var loadingScene = tm.ui.LoadingScene({
             assets: assets,
             width: SC_W,
             height: SC_H,
