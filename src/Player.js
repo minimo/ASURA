@@ -17,6 +17,11 @@ tm.define("asura.Player", {
     rollcount: 50,  //機体ロール具合
     type: 0,        //自機タイプ
 
+    power: 0,   //ショット威力 0-18000
+    charge: 0,  //パワーチャージ係数
+    level: 0,   //ショットレベル
+    limit: 0,   //ショットレベル上限
+
     init: function() {
         this.superInit("gunship1", 32, 32);
         this.setFrameIndex(4);
@@ -37,27 +42,11 @@ tm.define("asura.Player", {
             }else{
                 this.mouseON = false;
             }
-            
-            var kb = app.keyboard;
-            if (kb.getKey("up")) {
-                this.y -= this.speed;
-            } else
-            if (kb.getKey("down")) {
-                this.y += this.speed;
-            }
-            if (kb.getKey("left")) {
-                this.x -= this.speed;
-            } else
-            if (kb.getKey("right")) {
-                this.x += this.speed;
-            }
 
-            if (kb.getKey("space")) {
-                pb3.bullets.vanish();
-            }
-
-            //ショット
-            if (this.shotON) {
+            if (this.mouseON) {
+                //ショット
+                if (this.shotON) {
+                }
             }
         }
 
